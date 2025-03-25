@@ -1,4 +1,4 @@
-package g3_Eguia_Lab02.Actividades;
+package Actividades;
 
 public class Golosina {
     private String nombre;
