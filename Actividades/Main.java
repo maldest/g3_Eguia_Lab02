@@ -36,38 +36,38 @@ public class Main {
     }
 }
 */
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Crear una bolsa de Chocolatinas con un límite definido por el usuario
-        System.out.print("Ingrese el límite de la bolsa de Chocolatinas: ");
+        //crea la bolsa y establece el maximo por teclado
+        System.out.print("Ingrese el límite de la bolsa de Chocolatinas (ya hay 1 creada): ");
         int limiteChoco = scanner.nextInt();
-        scanner.nextLine(); // Limpiar el buffer
+        scanner.nextLine(); 
 
-        Bolsa<Chocolatina> bolsaCho = new Bolsa<>(limiteChoco);
+        Bolsa<Chocolatina> bolsaCho = new Bolsa<>(limiteChoco + 1); //+1 porque ya hay una creada
+        bolsaCho.add(new Chocolatina("Milka")); //chocolatina predeterminada
 
-        // Ingresar Chocolatinas manualmente
+        //Ingresar Chocolatinas manualmente
         for (int i = 0; i < limiteChoco; i++) {
             System.out.print("Ingrese la marca de la Chocolatina " + (i + 1) + ": ");
             String marca = scanner.nextLine();
             bolsaCho.add(new Chocolatina(marca));
         }
 
-        // Línea divisoria antes de ingresar las golosinas
         System.out.println("========================================");
 
-        // Crear una bolsa de Golosinas con un límite definido por el usuario
-        System.out.print("Ingrese el límite de la bolsa de Golosinas: ");
+        //Cre el limite de golosinas por teclado
+        System.out.print("Ingrese el límite de la bolsa de Golosinas (ya hay 1 creada): ");
         int limiteGolo = scanner.nextInt();
-        scanner.nextLine(); // Limpiar el buffer
+        scanner.nextLine(); 
 
-        Bolsa<Golosina> bolsaGol = new Bolsa<>(limiteGolo);
+        Bolsa<Golosina> bolsaGol = new Bolsa<>(limiteGolo + 1); 
+        bolsaGol.add(new Golosina("Gomitas", 50.5)); //golosina predeterminada
 
-        // Ingresar Golosinas manualmente
+        //Ingresar Golosinas por teclado
         for (int i = 0; i < limiteGolo; i++) {
             System.out.print("Ingrese el nombre de la Golosina " + (i + 1) + ": ");
             String nombre = scanner.nextLine();
@@ -79,18 +79,17 @@ public class Main {
             bolsaGol.add(new Golosina(nombre, peso));
         }
 
-        // Línea divisoria antes de mostrar los resultados
         System.out.println("\n========================================");
         System.out.println("        CONTENIDO DE LAS BOLSAS        ");
         System.out.println("========================================");
 
-        // Mostrar contenido de la bolsa de Chocolatinas
+        //Mostrar contenido de la bolsa de Chocolatinas
         System.out.println("\nBolsa de Chocolatinas:");
         for (Chocolatina chocolatina : bolsaCho) {
             System.out.println("- " + chocolatina.getMarca());
         }
 
-        // Mostrar contenido de la bolsa de Golosinas
+        //Mostrar contenido de la bolsa de Golosinas
         System.out.println("\nBolsa de Golosinas:");
         for (Golosina golosina : bolsaGol) {
             System.out.println("- " + golosina.getNombre() + " (Peso: " + golosina.getPeso() + "g)");
