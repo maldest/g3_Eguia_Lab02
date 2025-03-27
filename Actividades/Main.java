@@ -103,21 +103,25 @@ public class Main {
 /*
 SALIDA:
 
-Ingrese el límite de la bolsa de Chocolatinas: 1
-Ingrese la marca de la Chocolatina 1: a
+Ingrese el límite de la bolsa de Chocolatinas (ya hay 1 creada): 2
+Ingrese la marca de la Chocolatina 1: papas
+Ingrese la marca de la Chocolatina 2: avena
 ========================================
-Ingrese el límite de la bolsa de Golosinas: 1
-Ingrese el nombre de la Golosina 1: b
-Ingrese el peso de la Golosina 1 en gramos: 12
+Ingrese el límite de la bolsa de Golosinas (ya hay 1 creada): 1
+Ingrese el nombre de la Golosina 1: mani
+Ingrese el peso de la Golosina 1 en gramos: 20
 
 ========================================
         CONTENIDO DE LAS BOLSAS
 ========================================
 
 Bolsa de Chocolatinas:
-- a
+- Milka
+- papas
+- avena
 
 Bolsa de Golosinas:
-- b (Peso: 12.0g)
+- Gomitas (Peso: 50.5g)
+- mani (Peso: 20.0g)
  * 
  */
