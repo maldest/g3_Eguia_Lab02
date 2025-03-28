@@ -83,19 +83,18 @@ public class Main {
         System.out.println("        CONTENIDO DE LAS BOLSAS        ");
         System.out.println("========================================");
 
-        //Mostrar contenido de la bolsa de Chocolatinas
+        //mostrar contenido de la bolsa de Chocolatinas
         System.out.println("\nBolsa de Chocolatinas:");
         for (Chocolatina chocolatina : bolsaCho) {
             System.out.println("- " + chocolatina.getMarca());
         }
 
-        //Mostrar contenido de la bolsa de Golosinas
+        //mostrar contenido de la bolsa de Golosinas
         System.out.println("\nBolsa de Golosinas:");
         for (Golosina golosina : bolsaGol) {
             System.out.println("- " + golosina.getNombre() + " (Peso: " + golosina.getPeso() + "g)");
         }
 
-        // Cerrar el scanner
         scanner.close();
     }
 }
