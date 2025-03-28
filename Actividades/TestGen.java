@@ -1,13 +1,20 @@
 package Actividades;
 
-
 public class TestGen {
     public static void main(String[] args) {
-        String[] v = {"Perez", "Sanchez", "Rodriguez"};
-        Integer[] w = {12, 34, 56};
+        Golosina[] golosinas = {
+            new Golosina("Caramelo", 10.5),
+            new Golosina("Chocolate", 25.0)
+        };
 
-        System.out.println(Utils.exist(v, "Sanchez"));  // true
-        System.out.println(Utils.exist(w, 12));         // true
-        System.out.println(Utils.exist(w, "Salas"));    // Error de compilación
+        Chocolatina[] chocolatinas = {
+            new Chocolatina("Milka"),
+            new Chocolatina("Ferrero")
+        };
+
+        System.out.println(Utils.exist(golosinas, new Golosina("Caramelo", 10.5))); // true
+        System.out.println(Utils.exist(golosinas, new Golosina("Chicle", 5.0)));    // false
+        System.out.println(Utils.exist(chocolatinas, new Chocolatina("Ferrero")));  // true
+        System.out.println(Utils.exist(chocolatinas, new Chocolatina("Snickers"))); // false
     }
 }
