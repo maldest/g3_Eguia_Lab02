@@ -21,4 +21,9 @@ public class Chocolatina {
         Chocolatina that = (Chocolatina) obj;
         return marca.equals(that.marca);
     }
+
+    @Override
+    public String toString() {
+        return "Chocolatina{marca='" + marca + "'}";
+    }
 }
